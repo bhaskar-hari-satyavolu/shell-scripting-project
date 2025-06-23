@@ -7,7 +7,7 @@ Y="\e[33m"
 N="\e[0m"
 
 DATE=$(date +%F-%H-%M-%S)
-LOGFILE="/tmp/$0-$DATE.log"
+logfile="/tmp/$0-$DATE.log"
 
 echo "script started executing at $DATE"
 
