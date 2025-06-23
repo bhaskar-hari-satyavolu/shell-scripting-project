@@ -13,12 +13,12 @@ echo "script started executing at $DATE"
 
 validate(){
 
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then 
         echo "ERROR:: $2 Failed"
         exit 1
     else
-        echo "$2... $G success $N"
+        echo -e "$2... $G success $N"
     fi
 }
 
