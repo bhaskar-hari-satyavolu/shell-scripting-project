@@ -43,11 +43,17 @@ dnf install nodejs -y &>> $logfile
 
 validate $? "installing node js version"
 
-useradd roboshop &>> $logfile
+id roboshop
 
-validate $? "addind user"
+if [ $? -ne 0 ]
+then
+    useradd roboshop &>> $logfile
+    validate $? "addind user"
+else
+    echo -e "$G user already existed"
+fi
 
-mkdir /app &>> $logfile
+mkdir -p /app &>> $logfile
 
 validate $? "creating the directory"
 
@@ -57,7 +63,7 @@ validate $? "downloading catlogue application"
 
 cd /app 
 
-unzip /tmp/catalogue.zip &>> $logfile
+unzip -o /tmp/catalogue.zip &>> $logfile
 
 validate $? "unzipping the catlogue application"
 
