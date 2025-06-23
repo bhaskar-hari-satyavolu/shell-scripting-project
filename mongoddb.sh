@@ -11,7 +11,7 @@ logfile="/tmp/$0-$DATE.log"
 
 echo "script started executing at $DATE"
 
-VALIDATE(){
+validate(){
 
     if [ $1 -ne 0]
     then 
