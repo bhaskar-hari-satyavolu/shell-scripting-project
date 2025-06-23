@@ -18,7 +18,7 @@ VALIDATE(){
         echo "ERROR:: $2 Failed"
         exit 1
     else
-        echo "$2 success"
+        echo "$2... $G success $N"
     fi
 }
 
