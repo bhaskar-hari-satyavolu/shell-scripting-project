@@ -1,0 +1,29 @@
+For only scripts there is one editor called
+
+SED------stream line editor = temporary editor
+
+sed -e '1 a I am learning shell script' <file-name>
+
+a= append after first line
+
+if we want permanent change
+
+sed -i '1 a I am learning shell script' <file-name>
+
+if we want one line before
+
+sed -i '1  I am learning shell script' <file-name>
+
+updating:
+
+sed -e 's/sbin/SBIN/' passwd
+
+sed -e 's/word-to-find/word-to-replace' <file-name> --> by default first occurence in every line
+
+sed -e 's/word-to-find/word-to-replace/g' <file-name> --->for global change
+
+deleeting:
+
+sed -e '1d' passwd --> delete's first line
+
+sed -e '/learning/ d' passwd ---->delete on particular word
