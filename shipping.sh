@@ -85,7 +85,7 @@ validate $? "installing mysql"
 
 mysql -h mysql.devopsupgrade.online -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>$logfile
 
-validate $? "adding users into mysql"
+validate $? "loading shipping data"
 
 systemctl restart shipping &>> $logfile
 
